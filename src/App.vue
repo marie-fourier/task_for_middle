@@ -4,5 +4,6 @@
 </template>
 
 <style lang="scss">
+@import './assets/reset.css';
 @import './assets/style.scss';
 </style>
