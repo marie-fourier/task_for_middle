@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-const entities = require('../entities.json');
+const entities = require('@/assets/entities.json');
 
 Vue.use(Vuex);
 
