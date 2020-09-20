@@ -48,17 +48,13 @@ export default new Vuex.Store({
           commit('SET_LIKES', { likes });
         }
       } catch (err) {
-        commit('SET_LIKES', []);
+        commit('SET_LIKES', { likes: [] });
       }
     },
     like({ commit, getters }, entityId) {
       const { likes } = getters;
       const liked = likes.some((id) => id === entityId);
-      if (!liked) {
-        commit('LIKE', { id: entityId });
-      } else {
-        commit('UNLIKE', { id: entityId });
-      }
+      commit(liked ? 'UNLIKE' : 'LIKE', { id: entityId });
     },
   },
 });
